@@ -19,7 +19,7 @@ obtenerRaices() o obtenerRaiz(), según lo que devuelvan nuestros métodos y en 
 de no existir solución, se mostrará un mensaje.
 Nota: Formula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varia el signo delante de -b
  */
-package Ejercicio_5_Ext;
+package Ejercicio_3_Ext;
 
 /**
  *
