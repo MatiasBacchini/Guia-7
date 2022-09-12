@@ -6,6 +6,8 @@ definir los métodos getters y setters correspondientes.
  */
 package Ejercicio_1_Ext;
 
+import java.util.Scanner;
+
 /**
  *
  * @author matia
@@ -16,7 +18,14 @@ public class CancionMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+        System.out.println("ingresa el titulo de una cancion");
+        String titulo = leer.nextLine();
+        System.out.println("ingresa el autor");
+        String autor = leer.nextLine();
+        Cancion cancion = new Cancion(titulo, autor);
+        System.out.println(cancion.toString());
     }
-    
+
 }
