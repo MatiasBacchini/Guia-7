@@ -31,7 +31,17 @@ public class raicesMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+                raices r = new raices();
+        raicesServis sr = new raicesServis();
+  
+        sr.cargarvariables(r);
+        sr.calcularRaices(r);
+        sr.obtenerRaices(r);
+        sr.obtenerRaiz(r);
+        double c = sr.getDiscriminante(r);
+        System.out.println(c);
     }
-    
 }
+
+    
+   

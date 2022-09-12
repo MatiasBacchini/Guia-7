@@ -21,10 +21,88 @@ Nota: Formula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varia el s
  */
 package Ejercicio_5_Ext;
 
+import java.util.Scanner;
+
 /**
  *
  * @author matia
  */
 public class raicesServis {
-    
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+    public void cargarvariables(raices r) {
+        System.out.println(" Ingrese el valor de A");
+        r.setA(leer.nextDouble());
+        System.out.println(" Ingrese el valor de B");
+        r.setB(leer.nextDouble());
+        System.out.println(" Ingrese el valor de C");
+        r.setC(leer.nextDouble());
+    }
+
+    public double getDiscriminante(raices r) {
+        double discriminante = 0;
+
+        discriminante = Math.pow(r.getB(), 2) - 4 * r.getA() * r.getC();
+//        (b^2)-4*a*c
+        return discriminante;
+    }
+
+    public boolean tieneRaices(raices r) {
+        if (getDiscriminante(r) >= 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean tieneRaiz(raices r) {
+        if (getDiscriminante(r) == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public void obtenerRaices(raices r) {
+
+        if (tieneRaices(r) == true) {
+            double raiz1 = Math.sqrt(getDiscriminante(r));
+            double raiz2 = Math.sqrt(getDiscriminante(r));
+
+            System.out.println(" ");
+            System.out.println(raiz1);
+            System.out.println(raiz2);
+        }
+    }
+
+    public void obtenerRaiz(raices r) {
+
+        if (tieneRaices(r) == true) {
+            double raiz1 = Math.sqrt(getDiscriminante(r));
+
+            System.out.println(" ");
+            System.out.println(raiz1);
+
+        }
+    }
+
+    public void calcularRaices(raices r){
+        double resultado;
+        double resultado1;
+        
+        if (tieneRaices(r) == true) {
+           
+            resultado = (- r.getB() + getDiscriminante(r)) / 2 * r.getA();
+            
+            resultado1 = (- r.getB() - getDiscriminante(r)) / 2 * r.getA();
+
+            System.out.println(" el resultado 1 es: " + resultado);
+            System.out.println(" el resultado 2 es: " + resultado1);
+            
+        } else if (tieneRaiz(r) == true){
+            resultado = (- r.getB() + getDiscriminante(r)) / 2 * r.getA();
+            System.out.println(" el resultado es: " + resultado);
+        } else {
+            System.out.println(" La Ecuacion no tiene Solucion");
+        }
+    }
 }
+
