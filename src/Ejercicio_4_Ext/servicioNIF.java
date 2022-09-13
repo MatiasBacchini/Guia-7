@@ -55,7 +55,7 @@ class servicioNIF {
         System.out.println(" El número NIF correspondiente es : ");
         System.out.println(" ");
         System.out.println(" Número de NIF de " + n.getNombre() + ", es el número " +
-                n.getDNI()+ "-" + n.getLetra() + " .-");
+                n.getDNI()+ "-" + n.getLetra() + " . -");
     }    
 
 }

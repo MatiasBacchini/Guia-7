@@ -21,7 +21,8 @@ package Ejercicio_4_Ext;
  * @author matia
  */
 class NIF {
-        private int DNI;
+
+    private int DNI;
     private char letra;
     private String nombre;
 
@@ -58,6 +59,4 @@ class NIF {
         this.nombre = nombre;
     }
 
-   
 }
-

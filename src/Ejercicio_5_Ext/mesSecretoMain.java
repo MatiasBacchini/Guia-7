@@ -29,10 +29,8 @@ public class mesSecretoMain {
         ms.obtenerMes(m);
         System.out.println("-------------");
         ms.solicitarMes(m);
-        ms.resolverAsertijo(m);
+        ms.resolverAcertijo(m);
         System.out.println("");
     }
 
 }
-
-

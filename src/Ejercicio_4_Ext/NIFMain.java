@@ -26,18 +26,15 @@ public class NIFMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                NIF n = new NIF();
+        NIF n = new NIF();
         servicioNIF sn = new servicioNIF();
-        
-        
+
         sn.llenadoDatos(n);
         System.out.println("");
         sn.crearNif(n);
         System.out.println("");
-        sn.mostrarNif(n); 
+        sn.mostrarNif(n);
         System.out.println("");
     }
-    
-}
-    
 
+}
